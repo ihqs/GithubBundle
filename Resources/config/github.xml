@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://www.symfony-project.org/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.symfony-project.org/schema/dic/services http://www.symfony-project.org/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="ihqs_github.api.class">phpGitHubApi</parameter>
+        
+        <parameter key="ihqs_github.github.login"></parameter>
+        <parameter key="ihqs_github.github.secret"></parameter>
+        <parameter key="ihqs_github.github.type">user</parameter>
+    </parameters>
+
+    <services>
+        <service id="ihqs_github.api" class="%ihqs_github.api.class%">
+            <call method="authenticate">
+                <argument type="string">%ihqs_github.github.login%</argument>
+                <argument type="string">%ihqs_github.github.secret%</argument>
+                <argument type="string">http_password</argument>
+            </call>
+        </service>
+    </services>
+
+</container>

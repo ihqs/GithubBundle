@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Bundle\IHQS\GithubBundle\Entity\GithubOrganization" table="ihqs_github_organization">
+    
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        
+        <!-- An organization is a user too -->
+        <many-to-one field="user" target-entity="GithubUser">          
+            <cascade>
+                <cascade-all />
+            </cascade>
+            <join-column name="user_id" referenced-column-name="id" />
+        </many-to-one>
+        
+        <!-- Public membbers -->
+        <many-to-many field="publicMembers" target-entity="GithubUser">
+	          <join-table name="ihqs_github_organization_user">
+	            <join-columns>
+	              <join-column name="members" referenced-column-name="id" />
+	            </join-columns>
+	            <inverse-join-columns>
+	              <join-column name="organization" referenced-column-name="id" />
+	            </inverse-join-columns>
+	          </join-table>
+        </many-to-many>
+
+    </entity>
+
+</doctrine-mapping>

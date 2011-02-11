@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Bundle\IHQS\GithubBundle\Entity\GithubUser" table="ihqs_github_user">
+
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        
+        <!-- User unlogged -->
+        <field name="gitId" column="gitId" type="string" length="255" />
+        
+        <field name="login" column="login" type="string" length="255" />
+        
+        <field name="email" column="email" type="string" length="255" />
+        
+        <field name="name" column="name" type="string" length="255" />
+        
+        <field name="type" column="type" type="string" length="255" />
+        
+        <field name="permission" column="permission" type="string" length="255" nullable="true" />
+        
+        <field name="gravatarId" column="gravatar_id" type="string" length="255" nullable="true" />
+        
+        <field name="company" column="company" type="string" length="255" nullable="true" />
+        
+        <field name="blog" column="blog" type="string" length="255" nullable="true" />
+        
+        <field name="createdAt" column="created_at" type="datetime" />
+        
+        <field name="location" column="location" type="string" length="255" nullable="true" />
+
+        <field name="publicRepoCount" column="public_repo_count" type="integer" length="11" />
+        
+        <field name="followingCount" column="following_count" type="integer" length="11" />
+        
+        <field name="followersCount" column="followers_count" type="integer" length="11" /> 
+    
+        <!-- User logged -->
+        <field name="totalPrivateRepositories" column="total_private_repositories" type="integer" length="11" nullable="true" />
+        
+        <field name="totalOwnedPrivateRepositories" column="total_owned_private_repositories" type="integer" length="11" nullable="true" />
+        
+        <field name="collaborators" column="collaborators" type="integer" length="11" nullable="true" /> 
+        
+        <field name="diskUsage" column="disk_usage" type="integer" length="11" nullable="true" /> 
+        
+        <field name="plan" column="plan" type="string" length="255" nullable="true" />
+        
+        <!-- Inverse joints -->
+        <one-to-many field="commits_author" target-entity="GithubCommit" mapped-by="author" />
+        
+        <one-to-many field="commits_committer" target-entity="GithubCommit" mapped-by="committer" />
+        
+        <one-to-many field="repositories" target-entity="GithubRepository" mapped-by="owner" />
+        
+        <many-to-many field="organizations" target-entity="GithubOrganization" mapped-by="publicMembers" />
+        
+    </entity>
+
+</doctrine-mapping>

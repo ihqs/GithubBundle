@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://www.symfony-project.org/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.symfony-project.org/schema/dic/services http://www.symfony-project.org/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="ihqs_github.model.commit.class">Bundle\IHQS\GithubBundle\Document\GithubCommit</parameter>
+        <parameter key="ihqs_github.model.organization.class">Bundle\IHQS\GithubBundle\Document\GithubOrganization</parameter>
+        <parameter key="ihqs_github.model.repository.class">Bundle\IHQS\GithubBundle\Document\GithubRepository</parameter>
+        <parameter key="ihqs_github.model.user.class">Bundle\IHQS\GithubBundle\Document\GithubUser</parameter>
+        
+        <parameter key="ihqs_github.manager.commit.class">Bundle\IHQS\GithubBundle\Document\GithubCommitManager</parameter>
+        <parameter key="ihqs_github.manager.organization.class">Bundle\IHQS\GithubBundle\Document\GithubOrganizationManager</parameter>
+        <parameter key="ihqs_github.manager.repository.class">Bundle\IHQS\GithubBundle\Document\GithubRepositoryManager</parameter>
+        <parameter key="ihqs_github.manager.user.class">Bundle\IHQS\GithubBundle\Document\GithubUserManager</parameter>
+    </parameters>
+
+    <services>
+        <!-- Document manager -->
+        <service id="ihqs_github.model_manager" alias="octrine.odm.mongodb.document_manager" />
+        
+        <!-- Managers -->
+        <service id="ihqs_github.manager.commit" class="%ihqs_github.manager.commit.class%">
+            <argument type="service" id="ihqs_github.model_manager" />
+            <argument>%ihqs_github.model.commit.class%</argument>
+        </service>
+        
+        <service id="ihqs_github.manager.organization" class="%ihqs_github.manager.organization.class%">
+            <argument type="service" id="ihqs_github.model_manager" />
+            <argument>%ihqs_github.model.organization.class%</argument>
+        </service>
+        
+        <service id="ihqs_github.manager.repository" class="%ihqs_github.manager.repository.class%">
+            <argument type="service" id="ihqs_github.model_manager" />
+            <argument>%ihqs_github.model.repository.class%</argument>
+        </service>
+        
+        <service id="ihqs_github.manager.user" class="%ihqs_github.manager.user.class%">
+            <argument type="service" id="ihqs_github.model_manager" />
+            <argument>%ihqs_github.model.user.class%</argument>
+        </service>
+    </services>
+
+</container>

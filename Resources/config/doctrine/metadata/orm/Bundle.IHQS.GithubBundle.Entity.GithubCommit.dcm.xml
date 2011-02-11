@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Bundle\IHQS\GithubBundle\Entity\GithubCommit" table="ihqs_github_commit">
+
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        
+        <field name="gitId" column="gitId" type="string" length="255" />
+        
+        <field name="url" column="url" type="string" length="255" />
+        
+        <field name="committedDate" column="committed_date" type="datetime" />
+        
+        <field name="authoredDate" column="authored_date" type="datetime" />
+        
+        <field name="message" column="message" type="string" length="255" />
+        
+        <field name="tree" column="tree" type="string" length="255" />
+
+        <!-- Repository -->
+        <many-to-one field="repository" target-entity="GithubRepository">
+            <cascade>
+                <cascade-all />
+            </cascade>
+            <join-column name="repository_id" referenced-column-name="id" />
+        </many-to-one>
+
+        <!-- Author -->
+        <many-to-one field="author" target-entity="GithubUser">          
+            <cascade>
+                <cascade-all />
+            </cascade>
+            <join-column name="author_id" referenced-column-name="id" />
+        </many-to-one>
+        
+        <!-- Committer -->
+        <many-to-one field="committer" target-entity="GithubUser">          
+            <cascade>
+                <cascade-all />
+            </cascade>
+            <join-column name="committer_id" referenced-column-name="id" />
+        </many-to-one>
+        
+        <many-to-many field="parents" target-entity="GithubCommit">
+            <join-table name="ihqs_github_commit_commit">
+              <join-columns>
+                <join-column name="parent" referenced-column-name="id" />
+              </join-columns>
+              <inverse-join-columns>
+                <join-column name="child" referenced-column-name="id" />
+              </inverse-join-columns>
+            </join-table>  
+        </many-to-many>
+        
+        <!-- Inverse joints -->
+        <many-to-many field="children" target-entity="GithubCommit" mapped-by="parents">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </many-to-many>
+        
+    </entity>
+
+</doctrine-mapping>
