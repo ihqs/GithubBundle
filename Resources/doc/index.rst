@@ -58,3 +58,21 @@ Update your schema
 
 ::
     app/console doctrine:schema:update --force
+
+Configuration
+-------------
+
+config.yml
+
+::
+    ihqs_github.config:
+            db_driver: [orm|mongodb]
+            github:
+                    login: [your login]
+                    secret: [your password]
+                    type: [user|organization] (by default: user)
+
+If the path to your sf2 console is "app/console", then you'll just have to type
+
+::
+	app/console ihqs:github:retrieve

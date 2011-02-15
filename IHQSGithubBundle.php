@@ -13,10 +13,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle as BaseBundle;
 
 class IHQSGithubBundle extends BaseBundle
 {
-    public function boot()
-    {
-    }
-    
     public function getNamespace()
     {
         return __NAMESPACE__;
