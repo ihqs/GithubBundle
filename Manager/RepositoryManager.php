@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Bundle\IHQS\GithubBundle\Manager;
+namespace IHQS\GithubBundle\Manager;
 
 use Bundle\IHQS\GithubBundle\Model\RepositoryInterface;
 

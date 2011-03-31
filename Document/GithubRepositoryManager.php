@@ -1,6 +1,6 @@
 <?php
 
-namespace Bundle\IHQS\GithubBundle\Document;
+namespace IHQS\GithubBundle\Document;
 
 use Doctrine\ORM\DocumentManager;
 use Bundle\IHQS\GithubBundle\Manager\RepositoryManager as BaseRepositoryManager;

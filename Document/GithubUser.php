@@ -1,6 +1,6 @@
 <?php
 
-namespace Bundle\IHQS\GithubBundle\Document;
+namespace IHQS\GithubBundle\Document;
 
 use Bundle\IHQS\GithubBundle\Model\UserLogged as BaseUser;
 

@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Bundle\IHQS\GithubBundle;
+namespace IHQS\GithubBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle as BaseBundle;
 

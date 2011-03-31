@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Bundle\IHQS\GithubBundle\Model;
+namespace IHQS\GithubBundle\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
 

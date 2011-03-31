@@ -1,6 +1,6 @@
 <?php
 
-namespace Bundle\IHQS\GithubBundle\Entity;
+namespace IHQS\GithubBundle\Entity;
 
 use Bundle\IHQS\GithubBundle\Model\Organization as BaseOrganization;
 

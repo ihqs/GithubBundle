@@ -1,6 +1,6 @@
 <?php
 
-namespace Bundle\IHQS\GithubBundle\Entity;
+namespace IHQS\GithubBundle\Entity;
 
 use Doctrine\ORM\EntityManager;
 use Bundle\IHQS\GithubBundle\Manager\OrganizationManager as BaseOrganizationManager;

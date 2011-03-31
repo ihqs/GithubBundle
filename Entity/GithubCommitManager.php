@@ -1,6 +1,6 @@
 <?php
 
-namespace Bundle\IHQS\GitHubBundle\Entity;
+namespace IHQS\GitHubBundle\Entity;
 
 use Doctrine\ORM\EntityManager;
 use Bundle\IHQS\GithubBundle\Manager\CommitManager as BaseCommitManager;
