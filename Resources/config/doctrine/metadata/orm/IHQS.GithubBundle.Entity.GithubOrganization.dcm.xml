@@ -4,7 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="Bundle\IHQS\GithubBundle\Entity\GithubOrganization" table="ihqs_github_organization">
+    <entity name="IHQS\GithubBundle\Entity\GithubOrganization" table="ihqs_github_organization">
     
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
