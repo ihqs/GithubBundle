@@ -3,7 +3,7 @@
 namespace IHQS\GithubBundle\Entity;
 
 use Doctrine\ORM\EntityManager;
-use Bundle\IHQS\GithubBundle\Manager\UserManager as BaseUserManager;
+use IHQS\GithubBundle\Manager\UserManager as BaseUserManager;
 
 class GithubUserManager extends BaseUserManager
 {

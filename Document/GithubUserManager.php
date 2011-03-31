@@ -3,7 +3,7 @@
 namespace IHQS\GithubBundle\Document;
 
 use Doctrine\ORM\DocumentManager;
-use Bundle\IHQS\GithubBundle\Manager\UserManager as BaseUserManager;
+use IHQS\GithubBundle\Manager\UserManager as BaseUserManager;
 
 class GithubUserManager extends BaseUserManager
 {

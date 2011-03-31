@@ -9,7 +9,7 @@
 
 namespace IHQS\GithubBundle\Manager;
 
-use Bundle\IHQS\GithubBundle\Model\RepositoryInterface;
+use IHQS\GithubBundle\Model\RepositoryInterface;
 
 abstract class RepositoryManager extends BaseManager implements RepositoryManagerInterface
 {

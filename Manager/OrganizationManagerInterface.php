@@ -9,7 +9,7 @@
 
 namespace IHQS\GithubBundle\Manager;
 
-use Bundle\IHQS\GithubBundle\Model\OrganizationInterface;
+use IHQS\GithubBundle\Model\OrganizationInterface;
 
 interface OrganizationManagerInterface
 {

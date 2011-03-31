@@ -9,7 +9,7 @@
 
 namespace IHQS\GithubBundle\Manager;
 
-use Bundle\IHQS\GithubBundle\Model\CommitInterface;
+use IHQS\GithubBundle\Model\CommitInterface;
 
 abstract class CommitManager extends BaseManager implements CommitManagerInterface
 {

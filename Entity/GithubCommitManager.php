@@ -3,7 +3,7 @@
 namespace IHQS\GitHubBundle\Entity;
 
 use Doctrine\ORM\EntityManager;
-use Bundle\IHQS\GithubBundle\Manager\CommitManager as BaseCommitManager;
+use IHQS\GithubBundle\Manager\CommitManager as BaseCommitManager;
 
 class GithubCommitManager extends BaseCommitManager
 {

@@ -2,7 +2,7 @@
 
 namespace IHQS\GithubBundle\Document;
 
-use Bundle\IHQS\GithubBundle\Model\UserLogged as BaseUser;
+use IHQS\GithubBundle\Model\UserLogged as BaseUser;
 
 class GithubUser extends BaseUser
 {

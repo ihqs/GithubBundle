@@ -3,7 +3,7 @@
 namespace IHQS\GithubBundle\Document;
 
 use Doctrine\ORM\DocumentManager;
-use Bundle\IHQS\GithubBundle\Manager\RepositoryManager as BaseRepositoryManager;
+use IHQS\GithubBundle\Manager\RepositoryManager as BaseRepositoryManager;
 
 class GithubRepositoryManager extends BaseRepositoryManager
 {

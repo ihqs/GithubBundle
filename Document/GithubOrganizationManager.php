@@ -3,7 +3,7 @@
 namespace IHQS\GithubBundle\Document;
 
 use Doctrine\ORM\DocumentManager;
-use Bundle\IHQS\GithubBundle\Manager\OrganizationManager as BaseOrganizationManager;
+use IHQS\GithubBundle\Manager\OrganizationManager as BaseOrganizationManager;
 
 class GithubOrganizationManager extends BaseOrganizationManager
 {

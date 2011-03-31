@@ -2,8 +2,8 @@
 
 namespace IHQS\GithubBundle\Entity;
 
-use Bundle\IHQS\GithubBundle\Model\UserLogged as BaseUser;
-use Bundle\IHQS\GithubBundle\Model\UserInterface;
+use IHQS\GithubBundle\Model\UserLogged as BaseUser;
+use IHQS\GithubBundle\Model\UserInterface;
 
 class GithubUser extends BaseUser implements UserInterface
 {

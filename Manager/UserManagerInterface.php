@@ -9,7 +9,7 @@
 
 namespace IHQS\GithubBundle\Manager;
 
-use Bundle\IHQS\GithubBundle\Model\UserInterface;
+use IHQS\GithubBundle\Model\UserInterface;
 
 interface UserManagerInterface
 {
