@@ -12,7 +12,7 @@ namespace IHQS\GithubBundle\DependencyInjection;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Loader\FileLocator;
+use Symfony\Component\Config\FileLocator;
 
 class IHQSGithubExtension extends Extension
 {
