@@ -73,28 +73,4 @@ class IHQSGithubExtension extends Extension
         
         $container->setAlias('ihqs_github.account_manager', 'ihqs_github.manager.' . $type);
     }
-
-    /**
-     * @see Symfony\Component\DependencyInjection\Extension\ExtensionInterface
-     */
-    public function getXsdValidationBasePath()
-    {
-        return __DIR__.'/../Resources/config/schema';
-    }
-
-    /**
-     * @see Symfony\Component\DependencyInjection\Extension\ExtensionInterface
-     */
-    public function getNamespace()
-    {
-        return 'http://www.symfony-project.org/shemas/dic/symfony';
-    }
-
-    /**
-     * @see Symfony\Component\DependencyInjection\Extension\ExtensionInterface
-     */
-    public function getAlias()
-    {
-        return 'ihqs_github';
-    }
 }
