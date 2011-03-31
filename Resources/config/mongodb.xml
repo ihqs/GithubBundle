@@ -5,15 +5,15 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
         
     <parameters>
-        <parameter key="ihqs_github.model.commit.class">Bundle\IHQS\GithubBundle\Document\GithubCommit</parameter>
-        <parameter key="ihqs_github.model.organization.class">Bundle\IHQS\GithubBundle\Document\GithubOrganization</parameter>
-        <parameter key="ihqs_github.model.repository.class">Bundle\IHQS\GithubBundle\Document\GithubRepository</parameter>
-        <parameter key="ihqs_github.model.user.class">Bundle\IHQS\GithubBundle\Document\GithubUser</parameter>
+        <parameter key="ihqs_github.model.commit.class">IHQS\GithubBundle\Document\GithubCommit</parameter>
+        <parameter key="ihqs_github.model.organization.class">IHQS\GithubBundle\Document\GithubOrganization</parameter>
+        <parameter key="ihqs_github.model.repository.class">IHQS\GithubBundle\Document\GithubRepository</parameter>
+        <parameter key="ihqs_github.model.user.class">IHQS\GithubBundle\Document\GithubUser</parameter>
         
-        <parameter key="ihqs_github.manager.commit.class">Bundle\IHQS\GithubBundle\Document\GithubCommitManager</parameter>
-        <parameter key="ihqs_github.manager.organization.class">Bundle\IHQS\GithubBundle\Document\GithubOrganizationManager</parameter>
-        <parameter key="ihqs_github.manager.repository.class">Bundle\IHQS\GithubBundle\Document\GithubRepositoryManager</parameter>
-        <parameter key="ihqs_github.manager.user.class">Bundle\IHQS\GithubBundle\Document\GithubUserManager</parameter>
+        <parameter key="ihqs_github.manager.commit.class">IHQS\GithubBundle\Document\GithubCommitManager</parameter>
+        <parameter key="ihqs_github.manager.organization.class">IHQS\GithubBundle\Document\GithubOrganizationManager</parameter>
+        <parameter key="ihqs_github.manager.repository.class">IHQS\GithubBundle\Document\GithubRepositoryManager</parameter>
+        <parameter key="ihqs_github.manager.user.class">IHQS\GithubBundle\Document\GithubUserManager</parameter>
     </parameters>
 
     <services>
