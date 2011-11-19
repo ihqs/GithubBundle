@@ -10,7 +10,7 @@
 namespace IHQS\GithubBundle\Command;
 
 use Symfony\Component\Security\Authentication\Token\UsernamePasswordToken;
-use Symfony\Bundle\FrameworkBundle\Command\Command as BaseCommand;
+use Symfony\Component\Console\Command\Command as BaseCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
