@@ -67,7 +67,7 @@ This bundle provides persistency for your Github API requests
 ## Config file config.yml
 
 <pre>
-ihqs_github.config:
+ihqs_github:
 	db_driver: [orm|mongodb]
 	github:
 		login: [your login]
