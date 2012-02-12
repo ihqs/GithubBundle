@@ -55,12 +55,6 @@ This bundle provides persistency for your Github API requests
         );
     }
 </pre>
-    
-## Update your schema
-
-<pre>
-    app/console doctrine:schema:update --force
-</pre>
 
 # Configuration
 
@@ -73,6 +67,12 @@ ihqs_github:
 		login: [your login]
 		secret: [your password]
 		type: [user|organization] (by default: user)
+</pre>
+
+## Update your schema
+
+<pre>
+    app/console doctrine:schema:update --force
 </pre>
 
 ## Retreiving data
