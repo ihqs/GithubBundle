@@ -80,5 +80,5 @@ ihqs_github:
 If the path to your sf2 console is "app/console", then you'll just have to type
 
 <pre>
-	app/console ihqs:github:retrieve
+	app/console ihqs:github:refresh
 </pre>
