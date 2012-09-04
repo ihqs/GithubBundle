@@ -55,19 +55,13 @@ This bundle provides persistency for your Github API requests
         );
     }
 </pre>
-    
-## Update your schema
-
-<pre>
-    app/console doctrine:schema:update --force
-</pre>
 
 # Configuration
 
 ## Config file config.yml
 
 <pre>
-ihqs_github.config:
+ihqs_github:
 	db_driver: [orm|mongodb]
 	github:
 		login: [your login]
@@ -75,10 +69,16 @@ ihqs_github.config:
 		type: [user|organization] (by default: user)
 </pre>
 
+## Update your schema
+
+<pre>
+    app/console doctrine:schema:update --force
+</pre>
+
 ## Retreiving data
 
 If the path to your sf2 console is "app/console", then you'll just have to type
 
 <pre>
-	app/console ihqs:github:retrieve
+	app/console ihqs:github:refresh
 </pre>

@@ -9,15 +9,14 @@
 
 namespace IHQS\GithubBundle\Command;
 
-use Symfony\Component\Security\Authentication\Token\UsernamePasswordToken;
-use Symfony\Component\Console\Command\Command as BaseCommand;
+use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Output\Output;
 
-class RefreshCommitsCommand extends BaseCommand
+class RefreshCommitsCommand extends ContainerAwareCommand
 {
     /**
      * @see Command
@@ -43,8 +42,8 @@ EOT
     {
         $output->writeln('Refreshing commits');
 
-        $manager = $this->container->get('ihqs_github.account_manager');
-        $manager->updateAccount($this->container->getParameter('ihqs_github.github.login'));
+        $manager = $this->getContainer()->get('ihqs_github.account_manager');
+        $manager->updateAccount($this->getContainer()->getParameter('ihqs_github.github.login'));
 
         $output->writeln('Done');
     }
